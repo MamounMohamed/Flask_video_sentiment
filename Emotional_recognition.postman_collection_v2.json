@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "8019f205-d599-4900-b291-ef3261318766",
+		"name": "Emotional_recognition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28193617",
+		"_collection_link": "https://www.postman.com/mamounn/workspace/head-posture/collection/28193617-8019f205-d599-4900-b291-ef3261318766?action=share&creator=28193617&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "upload_video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/C:/Users/mamou/OneDrive/Pictures/Camera Roll/nodding.mp4"
+						},
+						{
+							"key": "model_name",
+							"value": "Emotion.h5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/upload_video",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"upload_video"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload_model",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "model",
+							"type": "file",
+							"src": "/C:/Users/mamou/Downloads/API/Emotion.h5"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/upload_model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"upload_model"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
